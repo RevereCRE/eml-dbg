@@ -1,0 +1,75 @@
+{
+  "name": "@reverecre/mailtool",
+  "version": "0.0.0",
+  "description": "Tool for debugging email messages",
+  "author": "Ryan Delaney @rrdelaney",
+  "bin": {
+    "mailtool": "./bin/run"
+  },
+  "homepage": "https://github.com/reverecre/mailtool",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "repository": "reverecre/mailtool",
+  "files": [
+    "/bin",
+    "/dist",
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json"
+  ],
+  "dependencies": {
+    "@oclif/core": "^1",
+    "@oclif/plugin-help": "^5",
+    "@oclif/plugin-plugins": "^2.0.1",
+    "mailparser": "^3.5.0",
+    "nodemailer": "^6.7.5"
+  },
+  "devDependencies": {
+    "@reverecre/eslint-config": "^1.2.0",
+    "@reverecre/prettier-config": "^1.0.0",
+    "@types/mailparser": "^3.4.0",
+    "@types/node": "^16.9.4",
+    "@types/nodemailer": "^6.4.4",
+    "eslint": "^7.32.0",
+    "globby": "^11",
+    "oclif": "^3",
+    "prettier": "^2.6.2",
+    "shx": "^0.3.3",
+    "ts-node": "^10.2.1",
+    "tslib": "^2.3.1",
+    "typescript": "^4.4.3"
+  },
+  "oclif": {
+    "bin": "mailtool",
+    "dirname": "mailtool",
+    "commands": "./dist/commands",
+    "plugins": [
+      "@oclif/plugin-help",
+      "@oclif/plugin-plugins"
+    ],
+    "topicSeparator": " ",
+    "topics": {
+      "hello": {
+        "description": "Say hello to the world and others"
+      }
+    }
+  },
+  "scripts": {
+    "build": "shx rm -rf dist && tsc -b",
+    "check:lint": "eslint . --ext .ts --config .eslintrc",
+    "postpack": "shx rm -f oclif.manifest.json",
+    "prepack": "npm run build && oclif manifest && oclif readme",
+    "version": "oclif readme && git add README.md",
+    "format": "prettier --write .",
+    "check:prettier": "prettier --check .",
+    "check": "npm run check:lint && npm run check:prettier"
+  },
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "bugs": "https://github.com/reverecre/mailtool/issues",
+  "keywords": [
+    "oclif"
+  ],
+  "types": "dist/index.d.ts",
+  "prettier": "@reverecre/prettier-config"
+}
