@@ -1,15 +1,15 @@
 {
-  "name": "@reverecre/mailtool",
+  "name": "eml-dbg",
   "version": "0.0.0",
   "description": "Tool for debugging email messages",
   "author": "Ryan Delaney @rrdelaney",
   "bin": {
-    "mailtool": "./bin/run"
+    "eml-dbg": "./bin/run"
   },
-  "homepage": "https://github.com/reverecre/mailtool",
+  "homepage": "https://github.com/reverecre/eml-dbg",
   "license": "MIT",
   "main": "dist/index.js",
-  "repository": "reverecre/mailtool",
+  "repository": "reverecre/eml-dbg",
   "files": [
     "/bin",
     "/dist",
@@ -39,8 +39,8 @@
     "typescript": "^4.4.3"
   },
   "oclif": {
-    "bin": "mailtool",
-    "dirname": "mailtool",
+    "bin": "eml-dbg",
+    "dirname": "eml-dbg",
     "commands": "./dist/commands",
     "plugins": [
       "@oclif/plugin-help",
@@ -66,7 +66,7 @@
   "engines": {
     "node": ">=12.0.0"
   },
-  "bugs": "https://github.com/reverecre/mailtool/issues",
+  "bugs": "https://github.com/reverecre/eml-dbg/issues",
   "keywords": [
     "oclif"
   ],
