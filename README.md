@@ -12,7 +12,7 @@ $ npm install -g eml-dbg
 $ eml-dbg COMMAND
 running command...
 $ eml-dbg (--version)
-eml-dbg/0.0.0 darwin-arm64 node-v16.13.1
+eml-dbg/0.1.0 darwin-arm64 node-v16.13.1
 $ eml-dbg --help [COMMAND]
 USAGE
   $ eml-dbg COMMAND

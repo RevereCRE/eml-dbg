@@ -1,6 +1,6 @@
 {
   "name": "eml-dbg",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Tool for debugging email messages",
   "author": "Ryan Delaney @rrdelaney",
   "bin": {
